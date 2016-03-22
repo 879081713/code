@@ -1,0 +1,136 @@
+*{
+    margin:0;
+    padding:0;
+}
+
+html,body{
+    height:100%;
+}
+
+.nav{
+    display: -webkit-box; /* 老版本语法: Safari, iOS, Android browser, older WebKit browsers. */
+    display: -moz-box; /* 老版本语法: Firefox (buggy) */
+    display: -ms-flexbox; /* 混合版本语法: IE 10 */
+    display: -webkit-flex; /* 新版本语法: Chrome 21+ */
+    display: flex; /* 新版本语法: Opera 12.1, Firefox 22+ */
+
+    -webkit-box-direction: normal;
+    -webkit-box-orient: horizontal;
+    -moz-flex-direction: row;
+    -webkit-flex-direction: row;
+    flex-direction: row;
+    width:100%;
+
+    li{
+        display:block;
+
+        width: 100%;
+        -webkit-box-flex: 1;
+        -webkit-flex: 1;
+        flex: 1;
+        a{
+            display:block;
+            width: 100%;
+            overflow: hidden;
+        }
+    }
+}
+
+.table{
+    display:table;
+    width:100%;
+    li{
+        display:table-cell;
+        box-sizing:border-box;
+        width:33.333333%;
+        a{
+            display:block;
+            overflow:hidden;
+        }
+    }
+}
+
+.flex-box{
+    display: -webkit-box; /* 老版本语法: Safari, iOS, Android browser, older WebKit browsers. */
+    display: -moz-box; /* 老版本语法: Firefox (buggy) */
+    display: -ms-flexbox; /* 混合版本语法: IE 10 */
+    display: -webkit-flex; /* 新版本语法: Chrome 21+ */
+    display: flex; /* 新版本语法: Opera 12.1, Firefox 22+ */
+
+    height:100%;
+    background:#ccc;
+
+    // 水平方向
+    // -webkit-box-pack: end;
+    // -moz-justify-content: end;
+    // -webkit-justify-content: end;
+    // justify-content: flex-end;
+
+    // 垂直方向
+    // -webkit-box-align: start;
+    // -moz-align-items: start;
+    // -webkit-align-items: start;
+    // align-items: flex-start;
+
+    // 左->右
+    // -webkit-box-direction: normal;
+    // -webkit-box-orient: horizontal;
+    // -moz-flex-direction: row;
+    // -webkit-flex-direction: row;
+    // flex-direction: row;
+
+    // 右->左
+    // -webkit-box-pack: end;
+    // -webkit-box-direction: reverse;
+    // -webkit-box-orient: horizontal;
+    // -moz-flex-direction: row-reverse;
+    // -webkit-flex-direction: row-reverse;
+    // flex-direction: row-reverse;
+    // 上->下
+    // -webkit-box-direction: normal;
+    // -webkit-box-orient: vertical;
+    // -moz-flex-direction: column;
+    // -webkit-flex-direction: column;
+    // flex-direction: column;
+    // 下->上
+    -webkit-box-pack: start;
+    -webkit-box-direction: normal;
+    -webkit-box-orient: vertical;
+    -moz-flex-direction: column;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+
+}
+.flex{
+    width:100%;
+    height:44px;
+    font-size:20px;
+    line-height:50px;
+    font-weight:700;
+    color:#fff;
+    text-align:center;
+    overflow: hidden;
+
+}
+.flex1{
+    background:#f00;
+    // .flex_box();
+}
+.flex2{
+    background:#00f;
+    height:100%;
+    // .flex_box();
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+    flex: 1;
+}
+.flex3{
+    background:#0f0;
+    // .flex_box(1);
+}
+
+.flex_box(@cloum:1){
+    -moz-box-flex: @cloum;
+    -webkit-box-flex: @cloum;
+    box-flex: @cloum;
+}
